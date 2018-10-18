@@ -995,6 +995,61 @@ table {
 	background-size: contain;
 }
 
+#booth53 {
+	background: url("/www/img/booth/53.jpg") center center no-repeat;
+	background-size: contain;
+}
+
+#booth54 {
+	background: url("/www/img/booth/54.jpg") center center no-repeat;
+	background-size: contain;
+}
+
+#booth55 {
+	background: url("/www/img/booth/55.jpg") center center no-repeat;
+	background-size: contain;
+}
+
+#booth56 {
+	background: url("/www/img/booth/56.jpg") center center no-repeat;
+	background-size: contain;
+}
+
+#booth57 {
+	background: url("/www/img/booth/57.jpg") center center no-repeat;
+	background-size: contain;
+}
+
+#booth58 {
+	background: url("/www/img/booth/58.jpg") center center no-repeat;
+	background-size: contain;
+}
+
+#booth59 {
+	background: url("/www/img/booth/59.jpg") center center no-repeat;
+	background-size: contain;
+}
+
+#booth60 {
+	background: url("/www/img/booth/60.jpg") center center no-repeat;
+	background-size: contain;
+}
+
+#booth61 {
+	background: url("/www/img/booth/61.jpg") center center no-repeat;
+	background-size: contain;
+}
+
+#booth62 {
+	background: url("/www/img/booth/62.jpg") center center no-repeat;
+	background-size: contain;
+}
+
+#booth63 {
+	background: url("/www/img/booth/63.jpg") center center no-repeat;
+	background-size: contain;
+}
+
 .print {
 	background: #eee !important;
 	border-radius: 5px;
@@ -1200,11 +1255,13 @@ table {
 
 .tabs {
 	overflow: visible;
-	li.is-active a{
+
+	li.is-active a {
 		background: $gradtrans2;
 		background-color: transparent !important;
 		color: black !important;
 	}
+
 	a {
 		font-family: $bold;
 		border: none !important;
@@ -1212,7 +1269,8 @@ table {
 		margin-left: 5px;
 		margin-right: 5px;
 		transition: all ease 0.5s;
-		&:hover{
+
+		&:hover {
 			background-color: transparent !important;
 			box-shadow: 0 8px 8px rgba(10, 10, 10, 0.1);
 		}
