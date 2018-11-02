@@ -1,12 +1,12 @@
 // 1. Import the initial variables
 @import "bulma.min";
 @import "../node_modules/bulma/sass/utilities/_all";
-$body: "MO ClearTone SG Light",
+$body: "Gill Sans Nova Book",
 "KoburinaGoStdN-W3",
 "こぶりなゴシック W3 JIS2004",
 "Koburina Gothic W3 JIS2004",
 sans-serif;
-$bold: "MO ClearTone SG DemiBold",
+$bold: "Gill Sans Nova Bold",
 "KoburinaGoStdN-W6",
 "こぶりなゴシック W6 JIS2004",
 "Koburina Gothic W6 JIS2004",
@@ -17,9 +17,36 @@ $grad2: linear-gradient(45deg, rgba(85, 192, 221, 1) 0%, rgba(31, 112, 142, 1) 1
 $gradtrans2: linear-gradient(45deg, rgba(85, 192, 221, 0.3) 0%, rgba(31, 112, 142, 0.3) 100%);
 $blue: rgba(31, 112, 142, 1);
 
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=8d160743-fab1-41f1-8bb2-584f9c7402e5");
+
+@font-face {
+	font-family: "Gill Sans Nova Book";
+	src: url("../www/Fonts/e5f44dae-0e0a-476d-9b92-3be122d4c8cd.eot?#iefix");
+	src: url("../www/Fonts/e5f44dae-0e0a-476d-9b92-3be122d4c8cd.eot?#iefix") format("eot"), url("../www/Fonts/43b67b68-8704-4bc0-9c41-620c664cb9dd.woff2") format("woff2"), url("../www/Fonts/37a7a423-c7fe-48f9-8013-63d2cc236c7a.woff") format("woff"), url("../www/Fonts/5ba67d9b-fa03-41f5-8020-c72589420b52.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Gill Sans Nova Book Italic";
+	src: url("../www/Fonts/22e2ca5e-adf6-41b2-b40d-18ce3be86f77.eot?#iefix");
+	src: url("../www/Fonts/22e2ca5e-adf6-41b2-b40d-18ce3be86f77.eot?#iefix") format("eot"), url("../www/Fonts/a2bba372-7bdb-4a75-a17a-6afcd47ef5f5.woff2") format("woff2"), url("../www/Fonts/88e1b823-5907-4654-ae0a-cb6a3e7a3cc5.woff") format("woff"), url("../www/Fonts/ad5ef801-a546-41d4-b48c-c55597505913.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Gill Sans Nova Bold";
+	src: url("../www/Fonts/079cb3e7-d420-4a5b-b544-a40ba9bb941c.eot?#iefix");
+	src: url("../www/Fonts/079cb3e7-d420-4a5b-b544-a40ba9bb941c.eot?#iefix") format("eot"), url("../www/Fonts/f5458c7b-8d3d-4e66-a95b-123697bf634d.woff2") format("woff2"), url("../www/Fonts/39540fdd-27ee-47ce-b434-ab7dfb6e3d7f.woff") format("woff"), url("../www/Fonts/a9df8687-efe0-429b-bbbb-d5d32b933c0a.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Gill Sans Nova Bold Italic";
+	src: url("../www/Fonts/b50a3060-e097-428a-94ff-4e87941f81ba.eot?#iefix");
+	src: url("../www/Fonts/b50a3060-e097-428a-94ff-4e87941f81ba.eot?#iefix") format("eot"), url("../www/Fonts/edb5c2df-5268-4dcd-b219-d1c5aa73a590.woff2") format("woff2"), url("../www/Fonts/71046f0c-2223-4090-ac90-c023805d44c3.woff") format("woff"), url("../www/Fonts/bd5e0942-678c-471d-b256-276e9e99cc1b.ttf") format("truetype");
+}
+
 body {
 	overflow: hidden;
 	font-family: $body;
+	color: black;
 }
 
 .has-bg-img {
@@ -84,24 +111,46 @@ body {
 }
 
 .news {
-	article {
-		padding: 1rem;
-	}
+	height: 100vh;
+	background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 
-	article p {
-		font-size: 0.8em;
-	}
-
-	.is-ancestor {
+	.columns {
 		overflow: scroll;
-		padding-right: 3rem;
+		text-align: left;
+		height: 50vh;
+
+		img {
+			border-radius: 5px;
+			transition: 0.5s ease all;
+			opacity: 0.5;
+		}
+
+		h4,
+		p {
+			opacity: 0.5;
+			transition: 0.5s ease all;
+		}
+
+		a:hover {
+			color: black;
+
+			&>img {
+				box-shadow: 0 8px 8px rgba(10, 10, 10, 0.1);
+				opacity: 1;
+			}
+
+			&>h4,
+			p {
+				opacity: 1;
+			}
+		}
 	}
 }
 
 .navbar {
 	position: fixed;
 	width: 100%;
-	background-color: rgba(255, 255, 255, 0.8);
+	background-color: rgba(255, 255, 255, 0);
 	z-index: 10;
 	font-size: 1.2em;
 	font-family: $bold;
@@ -118,6 +167,11 @@ body {
 	.navbar-item.has-dropdown {
 		align-items: center;
 		transition: 0.5s ease all;
+	}
+
+	.navbar-item,
+	.navbar-link {
+		color: black;
 	}
 
 	.navbar-link:after {
@@ -139,9 +193,8 @@ body {
 			top: 0;
 			transform: translateX(-101%);
 			transition: 0.5s ease all;
-			background-image: $grad;
+			background-color: white;
 			z-index: -1;
-			opacity: 0.3;
 		}
 
 		&:hover {
@@ -168,9 +221,8 @@ body {
 			top: 0;
 			transform: translateX(-101%);
 			transition: 0.5s ease all;
-			background-image: $grad;
+			background-color: white;
 			z-index: -1;
-			opacity: 0.3;
 		}
 
 		&:hover {
@@ -199,7 +251,8 @@ body {
 }
 
 .navbar-dropdown {
-	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 5px;
+	background-color: white;
 	border-top: none !important;
 
 	.navbar-item {
@@ -262,11 +315,7 @@ footer {
 	margin-bottom: 1em;
 	font-size: 0.9em;
 	color: white;
-	background: $grad2;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	border-top: 1px solid $blue;
-	padding-top: 1rem;
+	margin-top: -2.5rem;
 }
 
 #side {
@@ -299,56 +348,32 @@ nav .icon {
 // }
 #saiten {
 	text-align: center;
-	font-size: 2em;
+	font-size: 1.3em;
 	margin-top: 3rem;
 	font-family: $bold;
+	line-height: 2;
+	margin: 5rem 0 2rem;
 }
 
-.inbox {
-	text-align: center;
-	background: white;
-	position: relative;
-	padding: 2rem;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
-
-	&:before {
-		-webkit-border-radius: 7px;
-		border-radius: 7px;
-		content: "";
-		background: $grad;
-		position: absolute;
-		top: -2px;
-		right: -2px;
-		bottom: -2px;
-		left: -2px;
-		z-index: -1;
-	}
-}
 
 h3 {
-	display: inline-block;
-	font-size: 1.5em;
+	font-size: 2.5em;
 	margin-bottom: 2rem;
 	font-family: $bold;
-	background: $grad;
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	text-fill-color: transparent;
+	color: black;
+	text-align: center;
 }
 
 .sns {
 	text-align: center;
 
 	h3 {
-		margin-bottom: 0.5rem;
-		margin-top: 2rem;
+		margin-bottom: 2rem;
 	}
 }
 
 h4 {
-	font-size: 1em;
+	font-size: 0.9em;
 	font-family: $bold;
 }
 
@@ -363,9 +388,10 @@ h3+h6 {
 	margin-top: -1rem;
 }
 
-.section {
-	padding-top: 10rem;
-	margin-top: -10rem;
+#time {
+	background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+	padding-top: 7rem;
+	padding-bottom: 10rem;
 }
 
 #time img {
@@ -463,61 +489,31 @@ table {
 }
 
 .contleft {
-	margin-top: 100px;
-	padding: 2rem 0 0 2rem;
+	border-top: 1px solid rgba(0,0,0,0.1);
+	margin-top: 80px;
+	padding-top: 0.5rem;
 	position: fixed;
+	margin-left: 10.5rem;
+	z-index: 5;
 
 	h3 {
-		margin-left: 1rem;
-		background-clip: border-box !important;
-		background: none !important;
 		color: black;
-		-webkit-text-fill-color: black;
-		font-size: 1.3em;
+		font-size: 1em;
+		float: left;
 	}
 
-	ul {
-		margin-top: 2rem;
+	p {
+		font-size: 0.9em;
+		position: relative;
+		overflow: hidden;
+		transition: 0.5s all ease;
+		float: left;
+		border-bottom: 1px solid rgba(0,0,0,0);
+		margin: 0.1rem 0 0 2rem;
 
-		li {
-			font-size: 0.9em;
-			padding: 0.5rem 1rem 0.5rem 1rem;
-			position: relative;
-			overflow: hidden;
-			transition: 0.5s all ease;
-
-			&:before {
-				content: "";
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				left: 0;
-				top: 0;
-				background-image: $grad;
-				z-index: -2;
-				opacity: 0.3;
-			}
-
-			&:after {
-				content: "";
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				left: 0;
-				top: 0;
-				background-color: #FFF;
-				transition: 0.5s ease all;
-				z-index: -1;
-			}
-
-			&:hover {
-				background-color: rgba(0, 0, 0, 0) !important;
-				color: black;
-
-				&:after {
-					transform: translateX(101%);
-				}
-			}
+		&:hover {
+			border-bottom: 1px solid black;
+			color: black;
 		}
 	}
 }
@@ -527,13 +523,15 @@ table {
 #list,
 #blog,
 #contact {
-	margin-top: 100px;
+	padding-top: 150px;
 }
 
 #about {
 	img {
 		width: 40rem;
 	}
+
+	background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 }
 
 #concept {
@@ -548,24 +546,9 @@ table {
 	margin-right: auto;
 }
 
-.content-container {
-	padding: 3rem;
-	background: white;
-	position: relative;
-	border-radius: 5px;
+.container {
 	text-align: center;
-
-	&:before {
-		content: "";
-		background: $grad;
-		position: absolute;
-		top: -2px;
-		right: -2px;
-		bottom: -2px;
-		left: -2px;
-		z-index: -1;
-		border-radius: 7px;
-	}
+	padding: 8rem 0;
 
 	p {
 		font-size: 0.9em;
@@ -646,9 +629,10 @@ table {
 	background-color: #eee;
 
 	&~h4 {
-		text-align: center;
+		text-align: left;
 		margin-top: 0.5rem;
 		font-family: $bold;
+		font-size: 0.9em;
 
 		@include mobile {
 			font-size: 0.8em;
@@ -656,7 +640,7 @@ table {
 	}
 
 	&~h5 {
-		text-align: center;
+		text-align: left;
 		font-size: 0.7em;
 	}
 }
@@ -681,47 +665,47 @@ table {
 }
 
 #kigyo1 {
-	background: url("/www/img/kigyo/1.jpg") center center no-repeat;
+	background: url("/www/img/kigyo/1.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #kigyo2 {
-	background: url("/www/img/kigyo/2.jpg") center center no-repeat;
+	background: url("/www/img/kigyo/2.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #kigyo3 {
-	background: url("/www/img/award/1.jpg") center center no-repeat;
+	background: url("/www/img/award/1.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #kigyo4 {
-	background: url("/www/img/kigyo/4.jpg") center center no-repeat;
+	background: url("/www/img/kigyo/4.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #kigyo5 {
-	background: url("/www/img/kigyo/5.jpg") center center no-repeat;
+	background: url("/www/img/kigyo/5.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #kigyo6 {
-	background: url("/www/img/kigyo/6.jpg") center center no-repeat;
+	background: url("/www/img/kigyo/6.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #kigyo7 {
-	background: url("/www/img/kigyo/7.jpg") center center no-repeat;
+	background: url("/www/img/kigyo/7.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #kigyo8 {
-	background: url("/www/img/kigyo/8.jpg") center center no-repeat;
+	background: url("/www/img/kigyo/8.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #kigyo9 {
-	background: url("/www/img/kigyo/9.jpg") center center no-repeat;
+	background: url("/www/img/kigyo/9.jpg") left center no-repeat;
 	background-size: contain;
 }
 
@@ -736,322 +720,322 @@ table {
 }
 
 #booth1 {
-	background: url("/www/img/booth/1.jpg") center center no-repeat;
+	background: url("/www/img/booth/1.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth2 {
-	background: url("/www/img/booth/2.jpg") center center no-repeat;
+	background: url("/www/img/booth/2.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth3 {
-	background: url("/www/img/booth/3.jpg") center center no-repeat;
+	background: url("/www/img/booth/3.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth4 {
-	background: url("/www/img/booth/4.jpg") center center no-repeat;
+	background: url("/www/img/booth/4.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth5 {
-	background: url("/www/img/booth/5.jpg") center center no-repeat;
+	background: url("/www/img/booth/5.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth6 {
-	background: url("/www/img/booth/6.jpg") center center no-repeat;
+	background: url("/www/img/booth/6.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth7 {
-	background: url("/www/img/booth/7.jpg") center center no-repeat;
+	background: url("/www/img/booth/7.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth8 {
-	background: url("/www/img/booth/8.jpg") center center no-repeat;
+	background: url("/www/img/booth/8.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth9 {
-	background: url("/www/img/booth/9.jpg") center center no-repeat;
+	background: url("/www/img/booth/9.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth10 {
-	background: url("/www/img/booth/10.jpg") center center no-repeat;
+	background: url("/www/img/booth/10.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth11 {
-	background: url("/www/img/booth/11.jpg") center center no-repeat;
+	background: url("/www/img/booth/11.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth12 {
-	background: url("/www/img/booth/12.jpg") center center no-repeat;
+	background: url("/www/img/booth/12.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth13 {
-	background: url("/www/img/booth/13.jpg") center center no-repeat;
+	background: url("/www/img/booth/13.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth14 {
-	background: url("/www/img/booth/14.jpg") center center no-repeat;
+	background: url("/www/img/booth/14.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth15 {
-	background: url("/www/img/booth/15.jpg") center center no-repeat;
+	background: url("/www/img/booth/15.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth16 {
-	background: url("/www/img/booth/16.jpg") center center no-repeat;
+	background: url("/www/img/booth/16.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth17 {
-	background: url("/www/img/booth/17.jpg") center center no-repeat;
+	background: url("/www/img/booth/17.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth18 {
-	background: url("/www/img/booth/18.jpg") center center no-repeat;
+	background: url("/www/img/booth/18.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth19 {
-	background: url("/www/img/booth/19.jpg") center center no-repeat;
+	background: url("/www/img/booth/19.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth20 {
-	background: url("/www/img/booth/20.jpg") center center no-repeat;
+	background: url("/www/img/booth/20.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth21 {
-	background: url("/www/img/booth/21.jpg") center center no-repeat;
+	background: url("/www/img/booth/21.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth22 {
-	background: url("/www/img/booth/22.jpg") center center no-repeat;
+	background: url("/www/img/booth/22.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth23 {
-	background: url("/www/img/booth/23.jpg") center center no-repeat;
+	background: url("/www/img/booth/23.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth24 {
-	background: url("/www/img/booth/24.jpg") center center no-repeat;
+	background: url("/www/img/booth/24.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth25 {
-	background: url("/www/img/booth/25.jpg") center center no-repeat;
+	background: url("/www/img/booth/25.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth26 {
-	background: url("/www/img/booth/26.jpg") center center no-repeat;
+	background: url("/www/img/booth/26.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth27 {
-	background: url("/www/img/booth/27.jpg") center center no-repeat;
+	background: url("/www/img/booth/27.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth28 {
-	background: url("/www/img/booth/28.jpg") center center no-repeat;
+	background: url("/www/img/booth/28.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth29 {
-	background: url("/www/img/booth/29.jpg") center center no-repeat;
+	background: url("/www/img/booth/29.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth30 {
-	background: url("/www/img/booth/30.jpg") center center no-repeat;
+	background: url("/www/img/booth/30.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth31 {
-	background: url("/www/img/booth/31.jpg") center center no-repeat;
+	background: url("/www/img/booth/31.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth32 {
-	background: url("/www/img/booth/32.jpg") center center no-repeat;
+	background: url("/www/img/booth/32.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth33 {
-	background: url("/www/img/booth/33.jpg") center center no-repeat;
+	background: url("/www/img/booth/33.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth34 {
-	background: url("/www/img/booth/34.jpg") center center no-repeat;
+	background: url("/www/img/booth/34.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth35 {
-	background: url("/www/img/booth/35.jpg") center center no-repeat;
+	background: url("/www/img/booth/35.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth36 {
-	background: url("/www/img/booth/36.jpg") center center no-repeat;
+	background: url("/www/img/booth/36.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth37 {
-	background: url("/www/img/booth/37.jpg") center center no-repeat;
+	background: url("/www/img/booth/37.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth38 {
-	background: url("/www/img/booth/38.jpg") center center no-repeat;
+	background: url("/www/img/booth/38.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth39 {
-	background: url("/www/img/booth/39.jpg") center center no-repeat;
+	background: url("/www/img/booth/39.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth40 {
-	background: url("/www/img/booth/40.jpg") center center no-repeat;
+	background: url("/www/img/booth/40.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth41 {
-	background: url("/www/img/booth/41.jpg") center center no-repeat;
+	background: url("/www/img/booth/41.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth42 {
-	background: url("/www/img/booth/42.jpg") center center no-repeat;
+	background: url("/www/img/booth/42.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth43 {
-	background: url("/www/img/booth/43.jpg") center center no-repeat;
+	background: url("/www/img/booth/43.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth44 {
-	background: url("/www/img/booth/44.jpg") center center no-repeat;
+	background: url("/www/img/booth/44.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth45 {
-	background: url("/www/img/booth/45.jpg") center center no-repeat;
+	background: url("/www/img/booth/45.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth46 {
-	background: url("/www/img/booth/46.jpg") center center no-repeat;
+	background: url("/www/img/booth/46.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth47 {
-	background: url("/www/img/booth/47.jpg") center center no-repeat;
+	background: url("/www/img/booth/47.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth48 {
-	background: url("/www/img/booth/48.jpg") center center no-repeat;
+	background: url("/www/img/booth/48.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth49 {
-	background: url("/www/img/booth/49.jpg") center center no-repeat;
+	background: url("/www/img/booth/49.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth50 {
-	background: url("/www/img/booth/50.jpg") center center no-repeat;
+	background: url("/www/img/booth/50.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth51 {
-	background: url("/www/img/booth/51.jpg") center center no-repeat;
+	background: url("/www/img/booth/51.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth52 {
-	background: url("/www/img/booth/52.jpg") center center no-repeat;
+	background: url("/www/img/booth/52.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth53 {
-	background: url("/www/img/booth/53.jpg") center center no-repeat;
+	background: url("/www/img/booth/53.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth54 {
-	background: url("/www/img/booth/54.jpg") center center no-repeat;
+	background: url("/www/img/booth/54.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth55 {
-	background: url("/www/img/booth/55.jpg") center center no-repeat;
+	background: url("/www/img/booth/55.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth56 {
-	background: url("/www/img/booth/56.jpg") center center no-repeat;
+	background: url("/www/img/booth/56.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth57 {
-	background: url("/www/img/booth/57.jpg") center center no-repeat;
+	background: url("/www/img/booth/57.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth58 {
-	background: url("/www/img/booth/58.jpg") center center no-repeat;
+	background: url("/www/img/booth/58.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth59 {
-	background: url("/www/img/booth/59.jpg") center center no-repeat;
+	background: url("/www/img/booth/59.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth60 {
-	background: url("/www/img/booth/60.jpg") center center no-repeat;
+	background: url("/www/img/booth/60.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth61 {
-	background: url("/www/img/booth/61.jpg") center center no-repeat;
+	background: url("/www/img/booth/61.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth62 {
-	background: url("/www/img/booth/62.jpg") center center no-repeat;
+	background: url("/www/img/booth/62.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 #booth63 {
-	background: url("/www/img/booth/63.jpg") center center no-repeat;
+	background: url("/www/img/booth/63.jpg") left center no-repeat;
 	background-size: contain;
 }
 
 .print {
-	background: #eee !important;
+	background: rgba(255, 255, 255, 0.5) !important;
 	border-radius: 5px;
 	position: relative;
 
@@ -1225,9 +1209,11 @@ table {
 
 #list {
 	.icon {
-		transform: translateY(2px) !important;
-		color: rgba(233, 149, 181, 1);
+		transform: scale(0.6) translate(-5px, -4px) !important;
+		color: white;
 	}
+
+	background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
 }
 
 .sinsa {
@@ -1361,9 +1347,6 @@ table {
 		padding: 1rem;
 	}
 
-	.sns h3 {
-		margin-top: 1rem;
-	}
 }
 
 .tablet-only {
@@ -1441,9 +1424,6 @@ table {
 		}
 	}
 
-	.sns h3 {
-		margin-top: 1rem;
-	}
 
 	h3 {
 		margin-bottom: 0.5rem;
