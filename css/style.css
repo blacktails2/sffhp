@@ -7324,10 +7324,9 @@ nav .icon {
 #saiten {
   text-align: center;
   font-size: 1.3em;
-  margin-top: 3rem;
   font-family: "Gill Sans Nova Bold", "KoburinaGoStdN-W6", "こぶりなゴシック W6 JIS2004", "Koburina Gothic W6 JIS2004", sans-serif;
   line-height: 2;
-  margin: 5rem 0 2rem; }
+  margin: 0 0 2rem; }
 
 h3 {
   font-size: 2.5em;
@@ -7450,20 +7449,50 @@ table {
       border-bottom: 1px solid black;
       color: black; }
 
+.section {
+  position: relative; }
+  .section:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    transform: skewY(-7deg);
+    z-index: -3; }
+
 #about,
 #table,
 #list,
 #blog,
 #contact {
-  padding-top: 150px; }
+  padding-top: 50px; }
+  #about:before,
+  #table:before,
+  #list:before,
+  #blog:before,
+  #contact:before {
+    top: -30rem; }
 
-#about {
+#access:before {
+  bottom: -30rem; }
+
+#access:before {
+  background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%); }
+
+#about img {
+  width: 40rem;
+  margin-bottom: 2rem; }
+
+#about:before {
   background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%); }
-  #about img {
-    width: 40rem; }
 
 #concept img {
   width: 40rem; }
+
+#concept:before {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  top: 0; }
 
 .block-center {
   display: block;
@@ -7492,26 +7521,19 @@ table {
         position: absolute;
         width: 100%;
         height: 100%;
-        left: 0;
+        left: -100%;
         top: 0;
-        background-image: linear-gradient(135deg, #e995b5 0%, #c42f63 100%);
+        background-color: white;
         z-index: -2;
-        opacity: 0.3; }
-      .container p a:after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        background-color: #FFF;
-        transition: 0.5s ease all;
-        z-index: -1; }
+        transition: 0.5s ease all; }
       .container p a:hover {
-        background-color: rgba(0, 0, 0, 0) !important;
         color: black; }
-        .container p a:hover:after {
+        .container p a:hover:before {
           transform: translateX(101%); }
+
+.iconimg {
+  height: 10rem;
+  margin-top: -4.6rem; }
 
 .dummy {
   background-color: #eee;
