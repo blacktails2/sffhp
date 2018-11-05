@@ -7163,6 +7163,29 @@ body {
   transform: translateY(5px);
   margin-right: 5px; }
 
+#blog img {
+  border-radius: 5px;
+  transition: 0.5s ease all; }
+
+#blog .showfree {
+  text-align: left; }
+  #blog .showfree img {
+    height: 15rem; }
+
+#blog h4,
+#blog p {
+  transition: 0.5s ease all;
+  text-align: left; }
+
+#blog a:hover {
+  color: black; }
+  #blog a:hover > img {
+    box-shadow: 0 8px 8px rgba(10, 10, 10, 0.1);
+    opacity: 1; }
+  #blog a:hover > h4,
+  #blog a:hover p {
+    opacity: 1; }
+
 .news {
   height: 100vh;
   background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%); }
@@ -7487,8 +7510,18 @@ table {
 
 #access:before,
 #workshop:before,
-#every:before {
+#every:before,
+#contact:before, #blog:before {
   bottom: -30rem; }
+
+#blog:before {
+  background-image: linear-gradient(to top, #e6b980 0%, #eacda3 100%); }
+
+#contact {
+  padding-top: 10rem;
+  height: 100vh; }
+  #contact:before {
+    background-image: linear-gradient(-225deg, #DFFFCD 0%, #90F9C4 48%, #39F3BB 100%); }
 
 #otona:before {
   background-color: #DCD9D4;
@@ -7629,7 +7662,7 @@ table {
   background-size: contain; }
 
 #kigyo5 {
-  background: url("/www/img/kigyo/5.jpg") center center no-repeat;
+  background: url("/www/img/kigyo/5.png") center center no-repeat;
   background-size: contain; }
 
 #kigyo6 {
@@ -8136,6 +8169,8 @@ table {
 @media screen and (min-width: 769px) and (max-width: 1087px) {
   .tablet-none {
     display: none !important; }
+  #contact {
+    padding-top: 5rem; }
   .contleft {
     display: none; }
   .navbar {
@@ -8185,6 +8220,8 @@ table {
     font-family: "Gill Sans Nova Bold", "KoburinaGoStdN-W6", "こぶりなゴシック W6 JIS2004", "Koburina Gothic W6 JIS2004", sans-serif;
     margin-top: 0;
     margin-bottom: 1rem; }
+  #contact {
+    padding-top: 50px; }
   .mobile-none {
     display: none !important; }
   .navbar-menu {
