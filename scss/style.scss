@@ -78,19 +78,25 @@ body {
 	margin-top: 3rem;
 	padding: 1rem;
 	border-radius: 5px;
-	background: $gradtrans2;
+	border: white 2px solid;
 	font-family: $bold;
 	transition: all ease 0.5s;
 
 	&:hover {
 		box-shadow: 0 8px 8px rgba(10, 10, 10, 0.1);
+		background-color: #FFF;
 	}
+}
+
+.syuimg {
+	margin-top: 2.8rem;
+	height: 4rem;
 }
 
 #fourm {
 	h4 {
 		font-family: $bold;
-		background: $gradtrans2;
+		background: white;
 		padding: 1rem 0;
 		border-radius: 5px;
 	}
@@ -411,6 +417,10 @@ h3+h6 {
 	}
 }
 
+#award:before {
+	background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
+}
+
 .contbox,
 .box {
 	box-shadow: none;
@@ -488,7 +498,7 @@ table {
 }
 
 .contleft {
-	border-top: 1px solid rgba(0,0,0,0.1);
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
 	margin-top: 80px;
 	padding-top: 0.5rem;
 	position: fixed;
@@ -507,7 +517,7 @@ table {
 		overflow: hidden;
 		transition: 0.5s all ease;
 		float: left;
-		border-bottom: 1px solid rgba(0,0,0,0);
+		border-bottom: 1px solid rgba(0, 0, 0, 0);
 		margin: 0.1rem 0 0 2rem;
 
 		&:hover {
@@ -516,9 +526,11 @@ table {
 		}
 	}
 }
-.section{
+
+.section {
 	position: relative;
-	&:before{
+
+	&:before {
 		content: "";
 		position: absolute;
 		width: 100%;
@@ -529,39 +541,74 @@ table {
 		z-index: -3;
 	}
 }
+
 #about,
 #table,
 #list,
 #blog,
 #contact {
 	padding-top: 50px;
-	&:before{
+
+	&:before {
 		top: -30rem;
 	}
 }
-#access{
-	&:before{
+
+#table:before {
+	background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+#access,
+#workshop,
+#every {
+	&:before {
 		bottom: -30rem;
 	}
 }
-#access:before{
+#otona:before{
+	background-color: #DCD9D4; 
+ background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%); 
+ background-blend-mode: soft-light,screen;
+}
+#fourm:before{
+	background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+}
+#every:before{
+	background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%);
+}
+#access:before {
 	background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
 }
+
 #about {
 	img {
 		width: 40rem;
 		margin-bottom: 2rem;
 	}
-	&:before{
+
+	&:before {
 		background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 	}
+}
+
+#zadan:before {
+	background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+}
+
+#talk:before {
+	background-image: linear-gradient(45deg, #ee9ca7 0%, #ffdde1 100%);
+}
+
+#workshop:before {
+	background-image: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
 }
 
 #concept {
 	img {
 		width: 40rem;
 	}
-	&:before{
+
+	&:before {
 		background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
 		top: 0;
 	}
@@ -617,10 +664,12 @@ table {
 		}
 	}
 }
-.iconimg{
+
+.iconimg {
 	height: 10rem;
 	margin-top: -4.6rem;
 }
+
 .dummy {
 	background-color: #eee;
 	position: relative;
@@ -682,58 +731,65 @@ table {
 }
 
 #kigyo1 {
-	background: url("/www/img/kigyo/1.jpg") left center no-repeat;
+	background: url("/www/img/kigyo/1.jpg") center center no-repeat;
 	background-size: contain;
 }
 
 #kigyo2 {
-	background: url("/www/img/kigyo/2.jpg") left center no-repeat;
+	background: url("/www/img/kigyo/2.jpg") center center no-repeat;
 	background-size: contain;
 }
 
 #kigyo3 {
-	background: url("/www/img/award/1.jpg") left center no-repeat;
+	background: url("/www/img/award/1.jpg") center center no-repeat;
 	background-size: contain;
 }
 
 #kigyo4 {
-	background: url("/www/img/kigyo/4.jpg") left center no-repeat;
+	background: url("/www/img/kigyo/4.jpg") center center no-repeat;
 	background-size: contain;
 }
 
 #kigyo5 {
-	background: url("/www/img/kigyo/5.jpg") left center no-repeat;
+	background: url("/www/img/kigyo/5.jpg") center center no-repeat;
 	background-size: contain;
 }
 
 #kigyo6 {
-	background: url("/www/img/kigyo/6.jpg") left center no-repeat;
+	background: url("/www/img/kigyo/6.jpg") center center no-repeat;
 	background-size: contain;
 }
 
 #kigyo7 {
-	background: url("/www/img/kigyo/7.jpg") left center no-repeat;
+	background: url("/www/img/kigyo/7.jpg") center center no-repeat;
 	background-size: contain;
 }
 
 #kigyo8 {
-	background: url("/www/img/kigyo/8.jpg") left center no-repeat;
+	background: url("/www/img/kigyo/8.jpg") center center no-repeat;
 	background-size: contain;
 }
 
 #kigyo9 {
-	background: url("/www/img/kigyo/9.jpg") left center no-repeat;
+	background: url("/www/img/kigyo/9.jpg") center center no-repeat;
 	background-size: contain;
 }
 
 .sime {
 	margin-bottom: 0;
 	margin-top: 1rem;
-	background: $grad;
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	text-fill-color: transparent;
+	position: relative;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		bottom: 0;
+		left: 20%;
+		right: 20%;
+		background-color: #FFF;
+		z-index: -1;
+	}
 }
 
 #booth1 {
@@ -1051,6 +1107,41 @@ table {
 	background-size: contain;
 }
 
+#booth64 {
+	background: url("/www/img/booth/64.jpg") left center no-repeat;
+	background-size: contain;
+}
+
+#booth65 {
+	background: url("/www/img/booth/65.jpg") left center no-repeat;
+	background-size: contain;
+}
+
+#booth66 {
+	background: url("/www/img/booth/66.jpg") left center no-repeat;
+	background-size: contain;
+}
+
+#booth67 {
+	background: url("/www/img/booth/67.jpg") left center no-repeat;
+	background-size: contain;
+}
+
+#booth68 {
+	background: url("/www/img/booth/68.jpg") left center no-repeat;
+	background-size: contain;
+}
+
+#booth69 {
+	background: url("/www/img/booth/69.jpg") left center no-repeat;
+	background-size: contain;
+}
+
+#booth70 {
+	background: url("/www/img/booth/70.jpg") left center no-repeat;
+	background-size: contain;
+}
+
 .print {
 	background: rgba(255, 255, 255, 0.5) !important;
 	border-radius: 5px;
@@ -1230,7 +1321,9 @@ table {
 		color: white;
 	}
 
-	background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+	&:before{
+		background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+		}
 }
 
 .sinsa {
@@ -1260,8 +1353,7 @@ table {
 	overflow: visible;
 
 	li.is-active a {
-		background: $gradtrans2;
-		background-color: transparent !important;
+		background-color: white !important;
 		color: black !important;
 	}
 
@@ -1303,15 +1395,14 @@ table {
 		display: none !important;
 	}
 
-	.navbar-menu {
-		background-color: rgba(255, 255, 255, 0.8);
+	.contleft {
+		display: none;
 	}
 
 	.navbar {
 		width: 100%;
 		padding-top: 0.5rem;
 		padding-left: 0.5rem;
-		background-color: rgba(255, 255, 255, 0.8);
 		z-index: 10;
 		padding-bottom: 0.5rem;
 		font-size: 1.2em;
@@ -1460,13 +1551,16 @@ table {
 	display: block;
 
 	.dropdown-trigger button {
-		background: $gradtrans2;
 		border: none;
 		font-family: $bold;
 		transition: all ease 0.5s;
+		background-color: transparent;
+		border: 2px solid white;
+		margin-top: 10px;
 
 		&:hover {
 			box-shadow: 0 8px 8px rgba(10, 10, 10, 0.1);
+			background-color: #FFF;
 		}
 	}
 
@@ -1476,6 +1570,7 @@ table {
 		.dropdown-content {
 			border: none;
 			box-shadow: none;
+			background-color: transparent;
 
 			p {
 				font-size: 0.8em;

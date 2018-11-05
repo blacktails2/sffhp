@@ -7135,15 +7135,20 @@ body {
   margin-top: 3rem;
   padding: 1rem;
   border-radius: 5px;
-  background: linear-gradient(45deg, rgba(85, 192, 221, 0.3) 0%, rgba(31, 112, 142, 0.3) 100%);
+  border: white 2px solid;
   font-family: "Gill Sans Nova Bold", "KoburinaGoStdN-W6", "こぶりなゴシック W6 JIS2004", "Koburina Gothic W6 JIS2004", sans-serif;
   transition: all ease 0.5s; }
   .syutten:hover {
-    box-shadow: 0 8px 8px rgba(10, 10, 10, 0.1); }
+    box-shadow: 0 8px 8px rgba(10, 10, 10, 0.1);
+    background-color: #FFF; }
+
+.syuimg {
+  margin-top: 2.8rem;
+  height: 4rem; }
 
 #fourm h4 {
   font-family: "Gill Sans Nova Bold", "KoburinaGoStdN-W6", "こぶりなゴシック W6 JIS2004", "Koburina Gothic W6 JIS2004", sans-serif;
-  background: linear-gradient(45deg, rgba(85, 192, 221, 0.3) 0%, rgba(31, 112, 142, 0.3) 100%);
+  background: white;
   padding: 1rem 0;
   border-radius: 5px; }
 
@@ -7371,6 +7376,9 @@ h3 + h6 {
     #time img {
       margin-top: 0.5rem; } }
 
+#award:before {
+  background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%); }
+
 .contbox,
 .box {
   box-shadow: none;
@@ -7474,8 +7482,24 @@ table {
   #contact:before {
     top: -30rem; }
 
-#access:before {
+#table:before {
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
+
+#access:before,
+#workshop:before,
+#every:before {
   bottom: -30rem; }
+
+#otona:before {
+  background-color: #DCD9D4;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), radial-gradient(at 50% 0%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.5) 50%);
+  background-blend-mode: soft-light,screen; }
+
+#fourm:before {
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%); }
+
+#every:before {
+  background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%); }
 
 #access:before {
   background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%); }
@@ -7486,6 +7510,15 @@ table {
 
 #about:before {
   background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%); }
+
+#zadan:before {
+  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%); }
+
+#talk:before {
+  background-image: linear-gradient(45deg, #ee9ca7 0%, #ffdde1 100%); }
+
+#workshop:before {
+  background-image: linear-gradient(60deg, #abecd6 0%, #fbed96 100%); }
 
 #concept img {
   width: 40rem; }
@@ -7580,49 +7613,54 @@ table {
     font-size: 0.8em; }
 
 #kigyo1 {
-  background: url("/www/img/kigyo/1.jpg") left center no-repeat;
+  background: url("/www/img/kigyo/1.jpg") center center no-repeat;
   background-size: contain; }
 
 #kigyo2 {
-  background: url("/www/img/kigyo/2.jpg") left center no-repeat;
+  background: url("/www/img/kigyo/2.jpg") center center no-repeat;
   background-size: contain; }
 
 #kigyo3 {
-  background: url("/www/img/award/1.jpg") left center no-repeat;
+  background: url("/www/img/award/1.jpg") center center no-repeat;
   background-size: contain; }
 
 #kigyo4 {
-  background: url("/www/img/kigyo/4.jpg") left center no-repeat;
+  background: url("/www/img/kigyo/4.jpg") center center no-repeat;
   background-size: contain; }
 
 #kigyo5 {
-  background: url("/www/img/kigyo/5.jpg") left center no-repeat;
+  background: url("/www/img/kigyo/5.jpg") center center no-repeat;
   background-size: contain; }
 
 #kigyo6 {
-  background: url("/www/img/kigyo/6.jpg") left center no-repeat;
+  background: url("/www/img/kigyo/6.jpg") center center no-repeat;
   background-size: contain; }
 
 #kigyo7 {
-  background: url("/www/img/kigyo/7.jpg") left center no-repeat;
+  background: url("/www/img/kigyo/7.jpg") center center no-repeat;
   background-size: contain; }
 
 #kigyo8 {
-  background: url("/www/img/kigyo/8.jpg") left center no-repeat;
+  background: url("/www/img/kigyo/8.jpg") center center no-repeat;
   background-size: contain; }
 
 #kigyo9 {
-  background: url("/www/img/kigyo/9.jpg") left center no-repeat;
+  background: url("/www/img/kigyo/9.jpg") center center no-repeat;
   background-size: contain; }
 
 .sime {
   margin-bottom: 0;
   margin-top: 1rem;
-  background: linear-gradient(135deg, #e995b5 0%, #c42f63 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent; }
+  position: relative; }
+  .sime:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    left: 20%;
+    right: 20%;
+    background-color: #FFF;
+    z-index: -1; }
 
 #booth1 {
   background: url("/www/img/booth/1.jpg") left center no-repeat;
@@ -7876,6 +7914,34 @@ table {
   background: url("/www/img/booth/63.jpg") left center no-repeat;
   background-size: contain; }
 
+#booth64 {
+  background: url("/www/img/booth/64.jpg") left center no-repeat;
+  background-size: contain; }
+
+#booth65 {
+  background: url("/www/img/booth/65.jpg") left center no-repeat;
+  background-size: contain; }
+
+#booth66 {
+  background: url("/www/img/booth/66.jpg") left center no-repeat;
+  background-size: contain; }
+
+#booth67 {
+  background: url("/www/img/booth/67.jpg") left center no-repeat;
+  background-size: contain; }
+
+#booth68 {
+  background: url("/www/img/booth/68.jpg") left center no-repeat;
+  background-size: contain; }
+
+#booth69 {
+  background: url("/www/img/booth/69.jpg") left center no-repeat;
+  background-size: contain; }
+
+#booth70 {
+  background: url("/www/img/booth/70.jpg") left center no-repeat;
+  background-size: contain; }
+
 .print {
   background: rgba(255, 255, 255, 0.5) !important;
   border-radius: 5px;
@@ -8013,11 +8079,12 @@ table {
   text-align: left;
   margin-bottom: 0.5rem; }
 
-#list {
+#list .icon {
+  transform: scale(0.6) translate(-5px, -4px) !important;
+  color: white; }
+
+#list:before {
   background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%); }
-  #list .icon {
-    transform: scale(0.6) translate(-5px, -4px) !important;
-    color: white; }
 
 .sinsa {
   margin-top: 1.5rem;
@@ -8039,8 +8106,7 @@ table {
 .tabs {
   overflow: visible; }
   .tabs li.is-active a {
-    background: linear-gradient(45deg, rgba(85, 192, 221, 0.3) 0%, rgba(31, 112, 142, 0.3) 100%);
-    background-color: transparent !important;
+    background-color: white !important;
     color: black !important; }
   .tabs a {
     font-family: "Gill Sans Nova Bold", "KoburinaGoStdN-W6", "こぶりなゴシック W6 JIS2004", "Koburina Gothic W6 JIS2004", sans-serif;
@@ -8070,13 +8136,12 @@ table {
 @media screen and (min-width: 769px) and (max-width: 1087px) {
   .tablet-none {
     display: none !important; }
-  .navbar-menu {
-    background-color: rgba(255, 255, 255, 0.8); }
+  .contleft {
+    display: none; }
   .navbar {
     width: 100%;
     padding-top: 0.5rem;
     padding-left: 0.5rem;
-    background-color: rgba(255, 255, 255, 0.8);
     z-index: 10;
     padding-bottom: 0.5rem;
     font-size: 1.2em;
@@ -8167,17 +8232,21 @@ table {
 .dropdown {
   display: block; }
   .dropdown .dropdown-trigger button {
-    background: linear-gradient(45deg, rgba(85, 192, 221, 0.3) 0%, rgba(31, 112, 142, 0.3) 100%);
     border: none;
     font-family: "Gill Sans Nova Bold", "KoburinaGoStdN-W6", "こぶりなゴシック W6 JIS2004", "Koburina Gothic W6 JIS2004", sans-serif;
-    transition: all ease 0.5s; }
+    transition: all ease 0.5s;
+    background-color: transparent;
+    border: 2px solid white;
+    margin-top: 10px; }
     .dropdown .dropdown-trigger button:hover {
-      box-shadow: 0 8px 8px rgba(10, 10, 10, 0.1); }
+      box-shadow: 0 8px 8px rgba(10, 10, 10, 0.1);
+      background-color: #FFF; }
   .dropdown .dropdown-menu {
     position: static; }
     .dropdown .dropdown-menu .dropdown-content {
       border: none;
-      box-shadow: none; }
+      box-shadow: none;
+      background-color: transparent; }
       .dropdown .dropdown-menu .dropdown-content p {
         font-size: 0.8em;
         line-height: 1.8; }
