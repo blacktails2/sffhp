@@ -115,38 +115,43 @@ body {
 	transform: translateY(5px);
 	margin-right: 5px;
 }
-#blog{
+
+#blog {
+
+	img {
+		border-radius: 5px;
+		transition: 0.5s ease all;
+	}
+
+	.showfree {
+		text-align: left;
 
 		img {
-			border-radius: 5px;
-			transition: 0.5s ease all;
+			height: 15rem;
 		}
-		.showfree{
-			text-align: left;
-			img{
-				height: 15rem;
-			}
+	}
+
+	h4,
+	p {
+		transition: 0.5s ease all;
+		text-align: left;
+	}
+
+	a:hover {
+		color: black;
+
+		&>img {
+			box-shadow: 0 8px 8px rgba(10, 10, 10, 0.1);
+			opacity: 1;
 		}
-		h4,
+
+		&>h4,
 		p {
-			transition: 0.5s ease all;
-			text-align: left;
+			opacity: 1;
 		}
-
-		a:hover {
-			color: black;
-
-			&>img {
-				box-shadow: 0 8px 8px rgba(10, 10, 10, 0.1);
-				opacity: 1;
-			}
-
-			&>h4,
-			p {
-				opacity: 1;
-			}
-		}
+	}
 }
+
 .news {
 	height: 100vh;
 	background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
@@ -592,34 +597,42 @@ table {
 #access,
 #workshop,
 #every,
-#contact,#blog {
+#contact,
+#blog {
 	&:before {
 		bottom: -30rem;
 	}
 }
-#blog{
-	&:before{
+
+#blog {
+	&:before {
 		background-image: linear-gradient(to top, #e6b980 0%, #eacda3 100%);
 	}
 }
-#contact{
+
+#contact {
 	padding-top: 10rem;
 	height: 100vh;
-	&:before{
+
+	&:before {
 		background-image: linear-gradient(-225deg, #DFFFCD 0%, #90F9C4 48%, #39F3BB 100%);
 	}
 }
-#otona:before{
-	background-color: #DCD9D4; 
- background-image: linear-gradient(to bottom, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), radial-gradient(at 50% 0%, rgba(255,255,255,0.10) 0%, rgba(0,0,0,0.50) 50%); 
- background-blend-mode: soft-light,screen;
+
+#otona:before {
+	background-color: #DCD9D4;
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), radial-gradient(at 50% 0%, rgba(255, 255, 255, 0.10) 0%, rgba(0, 0, 0, 0.50) 50%);
+	background-blend-mode: soft-light, screen;
 }
-#fourm:before{
+
+#fourm:before {
 	background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
 }
-#every:before{
+
+#every:before {
 	background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%);
 }
+
 #access:before {
 	background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
 }
@@ -711,7 +724,7 @@ table {
 
 .iconimg {
 	height: 10rem;
-	margin-top: -4.6rem;
+	margin-top: -3rem;
 }
 
 .dummy {
@@ -816,6 +829,16 @@ table {
 
 #kigyo9 {
 	background: url("/www/img/kigyo/9.jpg") center center no-repeat;
+	background-size: contain;
+}
+
+#kigyo10 {
+	background: url("/www/img/kigyo/10.jpg") center center no-repeat;
+	background-size: contain;
+}
+
+#kigyo11 {
+	background: url("/www/img/kigyo/11.jpg") center center no-repeat;
 	background-size: contain;
 }
 
@@ -1186,6 +1209,61 @@ table {
 	background-size: contain;
 }
 
+#booth71 {
+	background: url("/www/img/booth/71.jpg") left center no-repeat;
+	background-size: contain;
+}
+
+#booth72 {
+	background: url("/www/img/booth/72.jpg") left center no-repeat;
+	background-size: contain;
+}
+
+#booth73 {
+	background: url("/www/img/booth/73.jpg") left center no-repeat;
+	background-size: contain;
+}
+
+#booth74 {
+	background: url("/www/img/booth/74.jpg") left center no-repeat;
+	background-size: contain;
+}
+
+#booth75 {
+	background: url("/www/img/booth/75.jpg") left center no-repeat;
+	background-size: contain;
+}
+
+#booth76 {
+	background: url("/www/img/booth/76.jpg") left center no-repeat;
+	background-size: contain;
+}
+
+#booth77 {
+	background: url("/www/img/booth/77.jpg") left center no-repeat;
+	background-size: contain;
+}
+
+#booth78 {
+	background: url("/www/img/booth/78.jpg") left center no-repeat;
+	background-size: contain;
+}
+
+#booth79 {
+	background: url("/www/img/booth/79.jpg") left center no-repeat;
+	background-size: contain;
+}
+
+#booth80 {
+	background: url("/www/img/booth/80.jpg") left center no-repeat;
+	background-size: contain;
+}
+
+#booth81 {
+	background: url("/www/img/booth/81.jpg") left center no-repeat;
+	background-size: contain;
+}
+
 .print {
 	background: rgba(255, 255, 255, 0.5) !important;
 	border-radius: 5px;
@@ -1365,9 +1443,9 @@ table {
 		color: white;
 	}
 
-	&:before{
+	&:before {
 		background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
-		}
+	}
 }
 
 .sinsa {
@@ -1438,9 +1516,11 @@ table {
 	.tablet-none {
 		display: none !important;
 	}
-	#contact{
+
+	#contact {
 		padding-top: 5rem;
 	}
+
 	.contleft {
 		display: none;
 	}
@@ -1518,9 +1598,11 @@ table {
 		margin-top: 0;
 		margin-bottom: 1rem;
 	}
-	#contact{
+
+	#contact {
 		padding-top: 50px;
 	}
+
 	.mobile-none {
 		display: none !important;
 	}

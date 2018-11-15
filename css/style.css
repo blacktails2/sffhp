@@ -7511,7 +7511,8 @@ table {
 #access:before,
 #workshop:before,
 #every:before,
-#contact:before, #blog:before {
+#contact:before,
+#blog:before {
   bottom: -30rem; }
 
 #blog:before {
@@ -7526,7 +7527,7 @@ table {
 #otona:before {
   background-color: #DCD9D4;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), radial-gradient(at 50% 0%, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.5) 50%);
-  background-blend-mode: soft-light,screen; }
+  background-blend-mode: soft-light, screen; }
 
 #fourm:before {
   background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%); }
@@ -7599,7 +7600,7 @@ table {
 
 .iconimg {
   height: 10rem;
-  margin-top: -4.6rem; }
+  margin-top: -3rem; }
 
 .dummy {
   background-color: #eee;
@@ -7679,6 +7680,14 @@ table {
 
 #kigyo9 {
   background: url("/www/img/kigyo/9.jpg") center center no-repeat;
+  background-size: contain; }
+
+#kigyo10 {
+  background: url("/www/img/kigyo/10.jpg") center center no-repeat;
+  background-size: contain; }
+
+#kigyo11 {
+  background: url("/www/img/kigyo/11.jpg") center center no-repeat;
   background-size: contain; }
 
 .sime {
@@ -7973,6 +7982,50 @@ table {
 
 #booth70 {
   background: url("/www/img/booth/70.jpg") left center no-repeat;
+  background-size: contain; }
+
+#booth71 {
+  background: url("/www/img/booth/71.jpg") left center no-repeat;
+  background-size: contain; }
+
+#booth72 {
+  background: url("/www/img/booth/72.jpg") left center no-repeat;
+  background-size: contain; }
+
+#booth73 {
+  background: url("/www/img/booth/73.jpg") left center no-repeat;
+  background-size: contain; }
+
+#booth74 {
+  background: url("/www/img/booth/74.jpg") left center no-repeat;
+  background-size: contain; }
+
+#booth75 {
+  background: url("/www/img/booth/75.jpg") left center no-repeat;
+  background-size: contain; }
+
+#booth76 {
+  background: url("/www/img/booth/76.jpg") left center no-repeat;
+  background-size: contain; }
+
+#booth77 {
+  background: url("/www/img/booth/77.jpg") left center no-repeat;
+  background-size: contain; }
+
+#booth78 {
+  background: url("/www/img/booth/78.jpg") left center no-repeat;
+  background-size: contain; }
+
+#booth79 {
+  background: url("/www/img/booth/79.jpg") left center no-repeat;
+  background-size: contain; }
+
+#booth80 {
+  background: url("/www/img/booth/80.jpg") left center no-repeat;
+  background-size: contain; }
+
+#booth81 {
+  background: url("/www/img/booth/81.jpg") left center no-repeat;
   background-size: contain; }
 
 .print {
