@@ -7108,7 +7108,8 @@ a.panel-block:hover, label.panel-block:hover {
 body {
   overflow: hidden;
   font-family: "Gill Sans Nova Book", "KoburinaGoStdN-W3", "こぶりなゴシック W3 JIS2004", "Koburina Gothic W3 JIS2004", sans-serif;
-  color: black; }
+  color: black;
+  min-height: 100vh; }
 
 .has-bg-img {
   background: url("../www/img/main01.jpg") center center;
@@ -7688,6 +7689,50 @@ table {
 
 #kigyo11 {
   background: url("/www/img/kigyo/11.jpg") center center no-repeat;
+  background-size: contain; }
+
+#kigyo12 {
+  background: url("/www/img/kigyo/12.jpg") center center no-repeat;
+  background-size: contain; }
+
+#kigyo13 {
+  background: url("/www/img/kigyo/13.jpg") center center no-repeat;
+  background-size: contain; }
+
+#kigyo14 {
+  background: url("/www/img/kigyo/14.jpg") center center no-repeat;
+  background-size: contain; }
+
+#kigyo15 {
+  background: url("/www/img/kigyo/15.jpg") center center no-repeat;
+  background-size: contain; }
+
+#kigyo16 {
+  background: url("/www/img/kigyo/16.jpg") center center no-repeat;
+  background-size: contain; }
+
+#kigyo17 {
+  background: url("/www/img/kigyo/17.jpg") center center no-repeat;
+  background-size: contain; }
+
+#kigyo18 {
+  background: url("/www/img/kigyo/18.jpg") center center no-repeat;
+  background-size: contain; }
+
+#kigyo19 {
+  background: url("/www/img/kigyo/19.jpg") center center no-repeat;
+  background-size: contain; }
+
+#kigyo20 {
+  background: url("/www/img/kigyo/20.jpg") center center no-repeat;
+  background-size: contain; }
+
+#kigyo21 {
+  background: url("/www/img/kigyo/21.jpg") center center no-repeat;
+  background-size: contain; }
+
+#kigyo16 {
+  background: url("/www/img/kigyo/16.jpg") center center no-repeat;
   background-size: contain; }
 
 .sime {
