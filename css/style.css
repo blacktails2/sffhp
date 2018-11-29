@@ -7188,7 +7188,6 @@ body {
     opacity: 1; }
 
 .news {
-  height: 100vh;
   background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%); }
   .news .columns {
     overflow: scroll;
@@ -7753,6 +7752,14 @@ table {
 
 #kigyo27 {
   background: url("/www/img/kigyo/27.jpg") center center no-repeat;
+  background-size: contain; }
+
+#kigyo28 {
+  background: url("/www/img/kigyo/28.jpg") center center no-repeat;
+  background-size: contain; }
+
+#kigyo29 {
+  background: url("/www/img/kigyo/29.jpg") center center no-repeat;
   background-size: contain; }
 
 .kigyobox {

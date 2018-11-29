@@ -154,7 +154,6 @@ body {
 }
 
 .news {
-	height: 100vh;
 	background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 
 	.columns {
@@ -923,9 +922,20 @@ table {
 	background-size: contain;
 }
 
-.kigyobox{
+#kigyo28 {
+	background: url("/www/img/kigyo/28.jpg") center center no-repeat;
+	background-size: contain;
+}
+
+#kigyo29 {
+	background: url("/www/img/kigyo/29.jpg") center center no-repeat;
+	background-size: contain;
+}
+
+.kigyobox {
 	margin-top: 2rem;
 }
+
 .sime {
 	margin-bottom: 0;
 	margin-top: 1rem;
